@@ -1,7 +1,30 @@
-body{
+@font-face {
+    font-family: 'KarmaBold'; 
+    src: url('./font/Karma-Bold.ttf') format('woff'),
+         url('../font/Karma-Bold.ttf') format('truetype');
+    font-weight: normal; 
+    font-style: normal;
+}
 
+*{
+    font-family: 'KarmaBold';
+    cursor: default;
+    user-select: none; 
+}
+
+body{
+    
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     width: 100%;
+    min-width: 800px;
 }
+
+#root{
+    width: 100%;
+    display: grid;
+    gap: 50px;
+}
+
+
