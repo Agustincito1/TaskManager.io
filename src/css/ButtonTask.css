@@ -1,0 +1,22 @@
+
+.buttonAddTask{
+    justify-self: center;
+    width: 200px;
+    background-color: #403245;
+    color: #ffffff;
+    cursor: pointer;
+    height: 100%;
+    border-width: 3px;
+    margin: auto;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: all 0.4s;
+}
+
+.buttonAddTask:hover{
+    transform: scale(1.05, 1.05);
+    animation-name: borderColors;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-duration: 8s;
+}
