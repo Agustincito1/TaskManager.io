@@ -24,7 +24,7 @@ function TaskBox({
         }
         onClick={() => console.log("hola")}
       >
-        {name}
+        <p>{name}</p>
       </div>
     </>
   );

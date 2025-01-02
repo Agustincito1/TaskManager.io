@@ -1,7 +1,8 @@
 
 .buttonAddTask{
     justify-self: center;
-    width: 200px;
+    position: relative;
+    width: 50%;
     background-color: #403245;
     color: #ffffff;
     cursor: pointer;
@@ -9,7 +10,7 @@
     border-width: 3px;
     margin: auto;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: clamp(5px, 2vw, 34px);
     transition: all 0.4s;
 }
 
@@ -20,3 +21,25 @@
     animation-direction: normal;
     animation-duration: 8s;
 }
+
+
+@media (max-width: 600px) {
+    
+
+    .buttonAddTask{
+        position: relative;
+        width: 50%;
+        max-height: 25px;
+        height: 30%;
+        background-color: #403245;
+        color: #ffffff;
+        cursor: pointer;
+        border-width: 3px;
+        margin: 0;
+        border-radius: 4px;
+        font-size: clamp(5px, 2vw, 34px);
+        transition: all 0.4s;
+        border: none;
+    }
+}
+  
