@@ -1,9 +1,12 @@
 import "../../../css/ButtonTask.css";
+interface PropButton {
+  onClick: () => void;
+}
 
-function ButtonTask() {
+function ButtonTask({ onClick }: PropButton) {
   return (
     <>
-      <button className="buttonAddTask" onClick={() => console.log("hola")}>
+      <button className="buttonAddTask" onClick={onClick}>
         Add task
       </button>
     </>

@@ -3,12 +3,19 @@ import "../../css/TaskManagent.css";
 import Percentage from "./objects/PercentageTast";
 import ButtonTask from "./objects/ButtonTask";
 import TaskBox from "./objects/TaskBox";
+import AddTaskForm from "./objects/AddTaskForm";
 import { getRandomNumber } from "../../../dist/utils/functions";
 
 //Get a random number, according to the quantity boxTasks
 
 function TaskManagentMain() {
   const [Style, SetStyle] = useState(getRandomNumber(4));
+
+  const [FormActive, SetFormActive] = useState(false);
+
+  const handleFormActive = () => {
+    SetFormActive(!FormActive);
+  };
 
   //UseEffect when update the style
   useEffect(() => {
@@ -22,6 +29,7 @@ function TaskManagentMain() {
   return (
     <>
       <main className="siteMain">
+        <AddTaskForm display={FormActive}></AddTaskForm>
         <section className="siteMain_section">
           <article className="siteMain-section_article">
             <TaskBox
@@ -49,9 +57,8 @@ function TaskManagentMain() {
               colorBox="#6694F8"
             ></TaskBox>
           </article>
-
           <article className="siteMain-section_article">
-            <ButtonTask></ButtonTask>
+            <ButtonTask onClick={handleFormActive}></ButtonTask>
             <Percentage></Percentage>
           </article>
         </section>
