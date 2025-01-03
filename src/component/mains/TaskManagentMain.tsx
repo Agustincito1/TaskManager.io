@@ -29,7 +29,10 @@ function TaskManagentMain() {
   return (
     <>
       <main className="siteMain">
-        <AddTaskForm display={FormActive}></AddTaskForm>
+        <AddTaskForm
+          display={FormActive}
+          onClickButton={handleFormActive}
+        ></AddTaskForm>
         <section className="siteMain_section">
           <article className="siteMain-section_article">
             <TaskBox

@@ -1,16 +1,21 @@
 import "../../../css/AddTaskForm.css";
+import ButtonOff from "./buttonOff";
 
 interface formProps {
   display: boolean;
+  onClickButton: () => void;
 }
 
-function AddTaskForm({ display }: formProps) {
+function AddTaskForm({ display, onClickButton }: formProps) {
   return (
     <div
       className="addTaskContainer"
       style={{ display: display ? "block" : "none" }}
     >
       <form className="addTaskForm">
+        
+        <ButtonOff functionOff={onClickButton}></ButtonOff>
+
         <h2 className="addTaskForm-h2">Add Task</h2>
         <label className="addTaskForm-label" htmlFor="TaskPriority">
           <input

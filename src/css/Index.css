@@ -35,7 +35,7 @@ body{
     width: 100%;
     display: grid;
     grid-auto-rows: 60px 85% auto;
-    gap: 5%;
+    gap: 80px;
     margin: 0;
     padding: 0;
 
